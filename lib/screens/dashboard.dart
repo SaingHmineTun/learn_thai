@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:learn_that/data/cognate_words.dart';
+import 'package:learn_that/screens/about_screen.dart';
 import 'package:learn_that/screens/phrase_category_screen.dart';
 import 'package:learn_that/screens/script_converter.dart';
 import 'package:learn_that/screens/sentence_builder.dart';
@@ -89,7 +90,11 @@ class DashboardScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Colors.indigo[900]!, Colors.indigo[700]!, Colors.blue[900]!],
+            colors: [
+              Colors.indigo[900]!,
+              Colors.indigo[700]!,
+              Colors.blue[900]!,
+            ],
           ),
         ),
         child: SafeArea(
@@ -115,18 +120,36 @@ class DashboardScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "ႁူိၼ်းတွၼ်ႈ!",
-                style: TextStyle(fontFamily: 'shan', fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+                "ႁိူၼ်း!",
+                style: TextStyle(
+                  fontFamily: 'shan',
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
               Text(
                 "Welcome to Learn Thai",
-                style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 16),
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.7),
+                  fontSize: 16,
+                ),
               ),
             ],
           ),
-          CircleAvatar(
-            backgroundColor: Colors.white.withOpacity(0.2),
-            child: const Icon(Icons.person, color: Colors.white),
+          InkWell(
+            onTap: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (ctx) => AboutScreen()));
+            },
+            child: CircleAvatar(
+              backgroundColor: Colors.white.withOpacity(0.2),
+              child: const Icon(
+                Icons.info_outline_rounded,
+                color: Colors.white,
+              ),
+            ),
           ),
         ],
       ),
@@ -146,11 +169,19 @@ class DashboardScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.lightbulb_outline, color: Colors.amber, size: 18),
+              const Icon(
+                Icons.lightbulb_outline,
+                color: Colors.amber,
+                size: 18,
+              ),
               const SizedBox(width: 8),
               Text(
                 "DAILY TWIN WORD (ၵႂၢမ်းမိူၼ်ၵၼ်)",
-                style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 12, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.9),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),
@@ -166,7 +197,11 @@ class DashboardScreen extends StatelessWidget {
           const Divider(color: Colors.white10, height: 25),
           Text(
             "Meaning: ${word.meaning}",
-            style: const TextStyle(color: Colors.amberAccent, fontWeight: FontWeight.w500, fontStyle: FontStyle.italic),
+            style: const TextStyle(
+              color: Colors.amberAccent,
+              fontWeight: FontWeight.w500,
+              fontStyle: FontStyle.italic,
+            ),
           ),
         ],
       ),
@@ -176,8 +211,19 @@ class DashboardScreen extends StatelessWidget {
   Widget _wordColumn(String word, String label, String font) {
     return Column(
       children: [
-        Text(word, style: TextStyle(fontFamily: font, fontSize: 26, fontWeight: FontWeight.bold, color: Colors.white)),
-        Text(label, style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
+        Text(
+          word,
+          style: TextStyle(
+            fontFamily: font,
+            fontSize: 26,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        Text(
+          label,
+          style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12),
+        ),
       ],
     );
   }
@@ -205,25 +251,48 @@ class DashboardScreen extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(25),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 10, offset: const Offset(0, 5))
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 10,
+            offset: const Offset(0, 5),
+          ),
         ],
       ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
           borderRadius: BorderRadius.circular(25),
-          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => item.targetScreen)),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => item.targetScreen),
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(color: item.color.withOpacity(0.1), shape: BoxShape.circle),
+                decoration: BoxDecoration(
+                  color: item.color.withOpacity(0.1),
+                  shape: BoxShape.circle,
+                ),
                 child: Icon(item.icon, size: 32, color: item.color),
               ),
               const SizedBox(height: 10),
-              Text(item.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-              Text(item.shanTitle, style: const TextStyle(fontFamily: 'shan', color: Colors.grey, fontSize: 13)),
+              Text(
+                item.title,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+              Text(
+                item.shanTitle,
+                style: const TextStyle(
+                  fontFamily: 'shan',
+                  color: Colors.grey,
+                  fontSize: 13,
+                ),
+              ),
             ],
           ),
         ),
