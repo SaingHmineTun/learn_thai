@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_that/data/thai_phrases.dart';
+import 'package:learn_thai/data/thai_phrases.dart';
 import 'dart:math';
 import '../models/thai_phrase.dart';
 

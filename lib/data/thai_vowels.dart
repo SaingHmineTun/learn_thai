@@ -5,12 +5,33 @@ final List<ThaiVowel> simpleVowels = [
   ThaiVowel(symbol: "ะ", displaySymbol: "-ะ", shanEquivalent: "ႉ", phonetic: "Sra A", shanExplanation: "သဵင် ဢႃႉ (ပုတ်း) - ဝၢႆးတူဝ်လိၵ်ႈ", position: VowelPosition.back),
   ThaiVowel(symbol: "า", displaySymbol: "-า", shanEquivalent: "ႃ", phonetic: "Sra Aa", shanExplanation: "သဵင် ဢႃ (ယၢဝ်း) - ဝၢႆးတူဝ်လိၵ်ႈ", position: VowelPosition.back),
   ThaiVowel(symbol: "ิ", displaySymbol: "-ิ", shanEquivalent: "ိ", phonetic: "Sra I", shanExplanation: "သဵင် ဢိ (ပုတ်း) - ၼိူဝ်တူဝ်လိၵ်ႈ", position: VowelPosition.top),
-  ThaiVowel(symbol: "ီ", displaySymbol: "-ီ", shanEquivalent: "ီ", phonetic: "Sra Ii", shanExplanation: "သဵင် ဢီ (ယၢဝ်း) - ၼိူဝ်တူဝ်လိၵ်ႈ", position: VowelPosition.top),
-  ThaiVowel(symbol: "ึ", displaySymbol: "-ึ", shanEquivalent: "ို", phonetic: "Sra Ue", shanExplanation: "သဵင် ဢိုဝ်ႉ (ပုတ်း) - ၼိူဝ်တူဝ်လိၵ်ႈ", position: VowelPosition.top),
+  ThaiVowel(
+      symbol: "ี", // Correct Thai: U+0E35
+      displaySymbol: "-ี",
+      shanEquivalent: "ဢီ",
+      phonetic: "Sara Ii (Long)",
+      shanExplanation: "သဵင် ဢီ (သဵင်ယၢဝ်း) - ၼိူဝ်တူဝ်လိၵ်ႈ",
+      position: VowelPosition.top
+  ),  ThaiVowel(symbol: "ึ", displaySymbol: "-ึ", shanEquivalent: "ို", phonetic: "Sra Ue", shanExplanation: "သဵင် ဢိုဝ်ႉ (ပုတ်း) - ၼိူဝ်တူဝ်လိၵ်ႈ", position: VowelPosition.top),
   ThaiVowel(symbol: "ื", displaySymbol: "-ื", shanEquivalent: "ိုဝ်", phonetic: "Sra Uee", shanExplanation: "သဵင် ဢိုဝ် (ယၢဝ်း) - ၼိူဝ်တူဝ်လိၵ်ႈ", position: VowelPosition.top),
-  ThaiVowel(symbol: "ု", displaySymbol: "-ု", shanEquivalent: "ု", phonetic: "Sra U", shanExplanation: "သဵင် ဢု (ပုတ်း) - တႂ်ႈတူဝ်လိၵ်ႈ", position: VowelPosition.bottom),
-  ThaiVowel(symbol: "ူ", displaySymbol: "-ူ", shanEquivalent: "ူ", phonetic: "Sra Uu", shanExplanation: "သဵင် ဢူ (ယၢဝ်း) - တႂ်ႈတူဝ်လိၵ်ႈ", position: VowelPosition.bottom),
-  ThaiVowel(symbol: "เ-ะ", displaySymbol: "เ-ะ", shanEquivalent: "ေႉ", phonetic: "Sra E (Short)", shanExplanation: "သဵင် ဢေႉ (ပုတ်း) - ၼႃႈ/ဝၢႆး", position: VowelPosition.around),
+  // Short U (Sara U) - MUST BE U+0E38
+  ThaiVowel(
+      symbol: "\u0E38",
+      displaySymbol: "-\u0E38",
+      shanEquivalent: "ဢု",
+      phonetic: "Sara U (Short)",
+      shanExplanation: "သဵင် ဢု (သဵင်ပုတ်း) - တႂ်ႈတူဝ်လိၵ်ႈ",
+      position: VowelPosition.bottom
+  ),
+  // Long Uu (Sara Uu) - MUST BE U+0E39
+  ThaiVowel(
+      symbol: "\u0E39",
+      displaySymbol: "-\u0E39",
+      shanEquivalent: "ဢူ",
+      phonetic: "Sara Uu (Long)",
+      shanExplanation: "သဵင် ဢူ (သဵင်ယၢဝ်း) - တႂ်ႈတူဝ်လိၵ်ႈ",
+      position: VowelPosition.bottom
+  ),ThaiVowel(symbol: "เ-ะ", displaySymbol: "เ-ะ", shanEquivalent: "ေႉ", phonetic: "Sra E (Short)", shanExplanation: "သဵင် ဢေႉ (ပုတ်း) - ၼႃႈ/ဝၢႆး", position: VowelPosition.around),
   ThaiVowel(symbol: "เ", displaySymbol: "เ-", shanEquivalent: "ေ", phonetic: "Sra E", shanExplanation: "သဵင် ဢေ (ယၢဝ်း) - ၼႃႈတူဝ်လိၵ်ႈ", position: VowelPosition.front),
   ThaiVowel(symbol: "แ-ะ", displaySymbol: "แ-ะ", shanEquivalent: "ႅႉ", phonetic: "Sra Ae (Short)", shanExplanation: "သဵင် ဢႄႉ (ပုတ်း) - ၼႃႈ/ဝၢႆး", position: VowelPosition.around),
   ThaiVowel(symbol: "แ", displaySymbol: "แ-", shanEquivalent: "ႅ", phonetic: "Sra Ae", shanExplanation: "သဵင် ဢႄ (ယၢဝ်း) - ၼႃႈတူဝ်လိၵ်ႈ", position: VowelPosition.front),

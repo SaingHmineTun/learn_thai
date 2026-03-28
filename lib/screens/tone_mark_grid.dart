@@ -12,7 +12,7 @@ class ToneMarkGrid extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text("Tone Marks - သဵင်ဝၼ်းၼႃး"),
+        title: const Text("Tone Marks - တူၼ်းသဵင်"),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),

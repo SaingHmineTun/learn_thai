@@ -1,7 +1,7 @@
 // Update your main.dart with this theme
 
 import 'package:flutter/material.dart';
-import 'package:learn_that/screens/dashboard.dart';
+import 'package:learn_thai/screens/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,18 +30,18 @@ class MyApp extends StatelessWidget {
         // Replace 'ThaiFont' and 'ShanFont' with your actual family names
         textTheme: const TextTheme(
           displayLarge: TextStyle(
-              fontFamily: 'ThaiFont',
+              fontFamily: 'Thai',
               fontSize: 26,
               fontWeight: FontWeight.bold,
               color: Color(0xFF1A237E)
           ),
           bodyLarge: TextStyle(
-              fontFamily: 'ShanFont',
+              fontFamily: 'Shan',
               fontSize: 18,
               color: Colors.black87
           ),
           labelLarge: TextStyle(
-              fontFamily: 'ShanFont',
+              fontFamily: 'Shan',
               fontWeight: FontWeight.w600
           ),
         ),
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
           centerTitle: true,
           titleTextStyle: TextStyle(
-              fontFamily: 'ShanFont',
+              fontFamily: 'Shan',
               fontSize: 20,
               fontWeight: FontWeight.bold
           ),

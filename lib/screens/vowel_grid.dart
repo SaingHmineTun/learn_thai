@@ -69,7 +69,7 @@ class _VowelGridState extends State<VowelGrid> {
 
   Widget _buildVowelTile(ThaiVowel item) {
     // FIX: Using Thai "อ" as the standard anchor
-    String display = item.displaySymbol.replaceAll("-", "อ");
+    String display = item.displaySymbol.replaceAll("-", "ก");
 
     return Container(
       decoration: BoxDecoration(
@@ -86,12 +86,9 @@ class _VowelGridState extends State<VowelGrid> {
             // FittedBox prevents the "Bottom Overflow" for the large Thai symbol
             Expanded(
               flex: 3,
-              child: FittedBox(
-                fit: BoxFit.contain,
-                child: Text(
-                  display,
-                  style: const TextStyle(fontFamily: 'thai', fontWeight: FontWeight.bold, color: Colors.deepOrange),
-                ),
+              child: Text(
+                display,
+                style: const TextStyle(fontFamily: 'thai', fontSize: 60, fontWeight: FontWeight.bold, color: Colors.deepOrange),
               ),
             ),
             const SizedBox(height: 4),

@@ -1,13 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:learn_that/data/cognate_words.dart';
-import 'package:learn_that/screens/about_screen.dart';
-import 'package:learn_that/screens/phrase_category_screen.dart';
-import 'package:learn_that/screens/script_converter.dart';
-import 'package:learn_that/screens/sentence_builder.dart';
-import 'package:learn_that/screens/syllable_lab.dart';
-import 'package:learn_that/screens/tone_mark_grid.dart';
-import 'package:learn_that/screens/vowel_grid.dart';
+import 'package:learn_thai/data/cognate_words.dart';
+import 'package:learn_thai/screens/about_screen.dart';
+import 'package:learn_thai/screens/phrase_category_screen.dart';
+import 'package:learn_thai/screens/script_converter.dart';
+import 'package:learn_thai/screens/sentence_builder.dart';
+import 'package:learn_thai/screens/syllable_lab.dart';
+import 'package:learn_thai/screens/tone_mark_grid.dart';
+import 'package:learn_thai/screens/vowel_grid.dart';
 import '../models/cognate_word.dart';
 import '../models/menu_item.dart';
 import 'alpha_grid.dart';
@@ -33,7 +33,7 @@ class DashboardScreen extends StatelessWidget {
     ),
     DashboardItem(
       title: "Tone Rules",
-      shanTitle: "သဵင်ဝၼ်းၼႃး",
+      shanTitle: "တူၼ်းသဵင်",
       icon: Icons.graphic_eq,
       color: const Color(0xFF4CAF50),
       targetScreen: ToneMarkGrid(),
@@ -47,7 +47,7 @@ class DashboardScreen extends StatelessWidget {
     ),
     DashboardItem(
       title: "Converter",
-      shanTitle: "ၸူၵ်းလႅၵ်ႈလိၵ်ႈ",
+      shanTitle: "ပိၼ်ႇလိၵ်ႈ",
       icon: Icons.sync,
       color: const Color(0xFF3F51B5),
       targetScreen: ConverterScreen(),
@@ -68,7 +68,7 @@ class DashboardScreen extends StatelessWidget {
     ),
     DashboardItem(
       title: "Syllable Lab",
-      shanTitle: "ႁွင်ႉသုၼ်ႇမႄႈလိၵ်ႈ",
+      shanTitle: "တူဝ်လိၵ်ႈထႆး",
       icon: Icons.science_outlined,
       color: const Color(0xFF673AB7),
       targetScreen: const SyllableLabScreen(),
@@ -120,7 +120,7 @@ class DashboardScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "ႁိူၼ်း!",
+                "မႂ်ႇသုင်ၶႃႈ!",
                 style: TextStyle(
                   fontFamily: 'shan',
                   fontSize: 28,
@@ -180,6 +180,7 @@ class DashboardScreen extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white.withOpacity(0.9),
                   fontSize: 12,
+                  fontFamily: "shan",
                   fontWeight: FontWeight.bold,
                 ),
               ),

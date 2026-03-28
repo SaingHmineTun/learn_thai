@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "it.saimao" "\0"
-            VALUE "FileDescription", "learn_that" "\0"
+            VALUE "FileDescription", "learn_thai" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "learn_that" "\0"
+            VALUE "InternalName", "learn_thai" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 it.saimao. All rights reserved." "\0"
-            VALUE "OriginalFilename", "learn_that.exe" "\0"
-            VALUE "ProductName", "learn_that" "\0"
+            VALUE "OriginalFilename", "learn_thai.exe" "\0"
+            VALUE "ProductName", "learn_thai" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
